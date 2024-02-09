@@ -1,7 +1,3 @@
-const print = () => {
-  console.log("You opened your js file :))");
-};
-
 const weatherForm = document.querySelector("form");
 const search = document.querySelector("input");
 const loc = document.querySelector("#location");
