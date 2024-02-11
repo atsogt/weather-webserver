@@ -21,12 +21,14 @@ const forecast = (lat, long, callback) => {
         temperature: temp,
         wind_speed: windSpeed,
         weather_descriptions: forecast,
+        wind_dir: windDirection,
       } = current;
 
       callback(
         undefined,
         name + ", " + region,
-        `It is ${temp} degrees with wind speed of ${windSpeed} with a chance of ${forecast[0]}`
+        `It is ${temp} degrees with wind speed of ${windSpeed}. Today forcast is ${forecast[0]}.`,
+        `The wind direction is blowing ${windDirection}`
       );
     }
   });

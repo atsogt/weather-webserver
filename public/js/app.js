@@ -1,6 +1,8 @@
 const weatherForm = document.querySelector("form");
 const search = document.querySelector("input");
 const loc = document.querySelector("#location");
+
+const windDir = document.querySelector("#wind");
 const locationWeather = document.querySelector("#location-weather");
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -14,10 +16,9 @@ weatherForm.addEventListener("submit", (e) => {
       if (data.error) {
         loc.textContent = data.error;
       } else {
-        console.log(data.location);
-        console.log(data.temp);
         loc.textContent = data.location;
         locationWeather.textContent = data.temp;
+        windDir.textContent = data.windDir;
       }
     });
   });
